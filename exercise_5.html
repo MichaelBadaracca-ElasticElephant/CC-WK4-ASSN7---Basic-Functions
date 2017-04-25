@@ -18,6 +18,33 @@
 			return sum / number;
 		}
 
+		function getAverageFromArray(arrayOfNums){
+			var sum = 0;
+			for(num of arrayOfNums){
+				sum += num;
+			}
+			var average = sum / arrayOfNums.length;
+			return average;
+		}
+
+		function getAverageVariadic(){
+			return getAverageFromArray(arguments);
+		}
+
+		addToAverage(13);
+		addToAverage(4);
+		addToAverage(134);
+		addToAverage(21);
+		addToAverage(30);
+
+		var numArray1 = [13,4,134,21,30];
+
+		console.log(getAverage());
+		console.log(getAverageFromArray(numArray1));
+		console.log(getAverageVariadic(13,4,134,21,30));
+		
+
+
 		/*
 			TODO: Using the functions above, compute and print the average of:
 			13, 4, 134, 21, 30
